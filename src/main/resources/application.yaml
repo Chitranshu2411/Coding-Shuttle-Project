@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: CodeNova-AI
+    description: this is application
