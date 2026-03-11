@@ -1,7 +1,6 @@
 package com.codingshuttle.projects.CodeNova_AI.entity;
 
-
-import com.codingshuttle.projects.CodeNova_AI.enums.PreviewStatus;
+import com.codingshuttle.projects.CodeNova_AI.enums.MessageRole;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,23 +8,24 @@ import lombok.experimental.FieldDefaults;
 
 import java.time.Instant;
 
+
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Preview {
+public class ChatMessage {
 
     Long id;
 
-    Project project;
+    ChatSession chatSession;
 
-    String namespace;
-    String podName;
-    String previewUrl;
+    String content;
 
-    PreviewStatus previewStatus;
+    MessageRole role;
 
-    Instant startedAt;
-    Instant terminatedAt;
+    String toolCalls; //JSON Array of Tools Called
+
+    Integer tokensUsed;
 
     Instant createdAt;
+
 }

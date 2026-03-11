@@ -1,7 +1,5 @@
 package com.codingshuttle.projects.CodeNova_AI.entity;
 
-
-import com.codingshuttle.projects.CodeNova_AI.enums.PreviewStatus;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,23 +7,20 @@ import lombok.experimental.FieldDefaults;
 
 import java.time.Instant;
 
+
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Preview {
-
-    Long id;
+public class ChatSession {
 
     Project project;
 
-    String namespace;
-    String podName;
-    String previewUrl;
+    User user;
 
-    PreviewStatus previewStatus;
-
-    Instant startedAt;
-    Instant terminatedAt;
+    String title;
 
     Instant createdAt;
+    Instant updatedAt;
+
+    Instant deletedAt;
 }

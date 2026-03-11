@@ -1,5 +1,7 @@
 package com.codingshuttle.projects.CodeNova_AI.enums;
 
-public class ProjectRole {
-    // EDITOR, VIEWER
+public enum ProjectRole {
+    ADMIN,
+    MEMBER,
+    VIEWER
 }
